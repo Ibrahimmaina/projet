@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord - Ma Tontine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">Ma Tontine</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tableau de Bord</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profil.html">Profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Groupes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Paramètres</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Déconnexion</a>
+              </li>
+              <!-- Ajout du solde avec une icône d'argent -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-money-bill-wave"></i> Solde: $500
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      
+  <!-- Barre de navigation -->
+  <?php include('navbar.php'); ?>
+
+  <!-- Contenu du tableau de bord -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Tableau de Bord</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Groupe de Tontine</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Créez un nouveau groupe de tontine ou rejoignez un groupe existant.</p>
+            <a href="creergroupe.html" class="btn btn-primary"><i class="fas fa-plus"></i> Créer un Groupe</a>
+            <a href="join_group.html" class="btn btn-secondary"><i class="fas fa-users"></i> Rejoindre un Groupe</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header bg-success text-white">
+            <h5 class="mb-0">Contributions</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Effectuez des contributions à votre tontine et consultez l'historique des paiements.</p>
+            <a href="contribution.html" class="btn btn-success"><i class="fas fa-coins"></i> Effectuer une Contribution</a>
+            <a href="historiquepayement.html" class="btn btn-secondary"><i class="fas fa-history"></i> Historique des Paiements</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header bg-warning text-white">
+            <h4 class="mb-0">Distribution des Fonds</h4>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Automatisez la distribution des fonds aux membres de votre groupe de tontine.</p>
+            <a href="distribute_funds.php" class="btn btn-warning"><i class="fas fa-hand-holding-usd"></i> Distribuer les Fonds</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>© 2024 Ma Tontine. Tous droits réservés.</p>
+      <p>Gérez vos tontines facilement et efficacement.</p>
+    </div>
+  </footer>
+  <style>
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    /* Styles pour la barre de navigation */
+.navbar-nav .nav-link {
+    color: #fff; /* Couleur du texte */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Couleur du texte au survol */
+  }
+  
+  </style>
+</body>
+</html>

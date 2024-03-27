@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rejoindre un Groupe - Ma Tontine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .card-header {
+      background-color: #007bff;
+      color: white;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .table-scroll {
+      height: 200px; /* Hauteur du tableau avec scroll */
+      overflow-y: auto; /* Activation du scroll vertical */
+    }
+  </style>
+</head>
+<body>
+  <!-- Barre de Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ma Tontine</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tableau de Bord</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Rejoindre un Groupe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Groupes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Paramètres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Liste des Tontines Publiques -->
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-center">Tontines Publiques</h4>
+          </div>
+          <div class="card-body table-scroll">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nom de la Tontine</th>
+                  <th>Prix</th>
+                  <th>Durée</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tontine publique 1</td>
+                  <td>$100</td>
+                  <td>6 mois</td>
+                </tr>
+                <tr>
+                  <td>Tontine publique 2</td>
+                  <td>$150</td>
+                  <td>12 mois</td>
+                </tr>
+                <tr>
+                  <td>Tontine publique 3</td>
+                  <td>$200</td>
+                  <td>8 mois</td>
+                </tr>
+                <tr>
+                    <td>Tontine publique 3</td>
+                    <td>$200</td>
+                    <td>8 mois</td>
+                  </tr>
+                  <tr>
+                    <td>Tontine publique 3</td>
+                    <td>$200</td>
+                    <td>8 mois</td>
+                  </tr>
+                   <tr>
+                  <td>Tontine publique 3</td>
+                  <td>$200</td>
+                  <td>8 mois</td>
+                </tr>
+                <!-- Ajoutez plus de lignes si nécessaire -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Formulaire de Rejoindre une Tontine -->
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-center">Rejoindre un Groupe de Tontine</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="codeGroupe"><i class="fas fa-users"></i> Code du Groupe :</label>
+                <input type="text" class="form-control" id="codeGroupe" placeholder="Entrez le code du groupe">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Rejoindre le Groupe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <p>© 2024 Ma Tontine. Tous droits réservés. Gérez vos tontines facilement et efficacement.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

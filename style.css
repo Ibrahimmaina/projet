@@ -1,0 +1,72 @@
+/* Styles personnalisés pour la barre de navigation */
+.navbar {
+  background-color: #343a40; /* Couleur de fond */
+}
+
+.navbar-brand {
+  color: #fff; /* Couleur du texte de la marque */
+  font-weight: bold; /* Graisse de la police */
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Couleur du texte des liens */
+  transition: color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700; /* Couleur du texte des liens au survol (or) */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Couleur de l'icône du bouton de bascule */
+}
+
+.navbar-toggler {
+  border-color: #fff; /* Couleur de la bordure du bouton de bascule */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  background-color: #fff; /* Couleur de fond du bouton de bascule au survol */
+}
+
+/* Décoration de style génie */
+.navbar::before {
+  content: "\269B"; /* Code Unicode pour une icône de génie */
+  font-size: 2.5rem;
+  color: #ffd700; /* Couleur de l'icône de génie */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.navbar::after {
+  content: "\269B"; /* Code Unicode pour une icône de génie */
+  font-size: 2.5rem;
+  color: #ffd700; /* Couleur de l'icône de génie */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Styles pour les écrans de taille moyenne et supérieure */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 600px; /* Ajuster la largeur maximale du conteneur pour les écrans plus larges */
+  }
+}
+
+/* Styles pour les écrans de petite taille (smartphones) */
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 10px; /* Réduire l'espacement intérieur du conteneur pour les petits écrans */
+  }
+
+  .form-group {
+    margin-bottom: 15px; /* Ajuster la marge entre les groupes de formulaires pour les petits écrans */
+  }
+}

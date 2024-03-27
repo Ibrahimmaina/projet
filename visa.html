@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dépôt par Carte Bancaire - Ma Tontine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Ma Tontine</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tableau de Bord</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Groupes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Paramètres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Déconnexion</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1>Dépôt par Carte Bancaire</h1>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Informations de Paiement
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nomCarte">Nom sur la Carte</label>
+                            <input type="text" class="form-control" id="nomCarte">
+                        </div>
+                        <div class="form-group">
+                            <label for="numeroCarte">Numéro de Carte</label>
+                            <input type="text" class="form-control" id="numeroCarte">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="dateExpiration">Date d'Expiration</label>
+                                <input type="text" class="form-control" id="dateExpiration">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="codeSecurite">Code de Sécurité</label>
+                                <input type="text" class="form-control" id="codeSecurite">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Valider le Paiement</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>Contactez-nous</h5>
+                <ul class="list-unstyled">
+                    <li>Adresse : [Votre adresse]</li>
+                    <li>Email : [Votre email]</li>
+                    <li>Téléphone : [Votre numéro de téléphone]</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h5>Liens rapides</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>&copy; 2024 Ma Tontine. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src

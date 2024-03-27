@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historique des Paiements - Ma Tontine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Styles CSS personnalisés */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barre de Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ma Tontine</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tableau de Bord</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rejoindre un Groupe</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Historique des Paiements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Paramètres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- En-tête de la Page -->
+  <header>
+    <div class="container mt-4">
+      <h1 class="text-center">Historique des Paiements</h1>
+    </div>
+  </header>
+
+  <!-- Contenu Principal -->
+  <div class="container mt-4">
+    <!-- Barre de Recherche -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Rechercher un paiement">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Liste des Paiements -->
+    <div class="card mt-4">
+      <div class="card-header">
+        <h4>Liste des Paiements</h4>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Montant</th>
+              <th>Mode de Paiement</th>
+              <th>Groupe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024-03-25</td>
+              <td>$50</td>
+              <td>Carte de Crédit</td>
+              <td>Groupe 8 </td>
+            </tr>
+            <tr>
+              <td>2024-03-24</td>
+              <td>$100</td>
+              <td>Transfert Bancaire</td>
+              <td>Groupe 1 </td>
+            </tr>
+            <!-- Ajoutez plus de lignes si nécessaire -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Options de Filtrage -->
+    <div class="mt-4">
+      <!-- Options de filtrage -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="mt-4">
+      <!-- Pagination -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Ma Tontine. Tous droits réservés. Gérez vos tontines facilement et efficacement.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

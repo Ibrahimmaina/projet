@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer un Groupe - Ma Tontine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .card-header {
+      background-color: #007bff;
+      color: white;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    body {
+      background-color: #ffffff; /* Couleur de l'arrière-plan */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ma Tontine</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="tableau.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tableau.html">Tableau de Bord</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Créer un Groupe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Groupes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Paramètres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-center">Créer un Groupe de Tontine</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="nomGroupe"><i class="fas fa-users"></i> Nom du Groupe :</label>
+                <input type="text" class="form-control" id="nomGroupe" placeholder="Entrez le nom du groupe">
+              </div>
+              <div class="form-group">
+                <label for="description"><i class="fas fa-info-circle"></i> Description :</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Entrez une description du groupe"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="prix"><i class="fas fa-money-bill-wave"></i> Prix par Versement :</label>
+                <input type="number" class="form-control" id="prix" min="0" placeholder="Entrez le prix par versement" required>
+              </div>
+              <div class="form-group">
+                <label for="duree"><i class="fas fa-hourglass-half"></i> Durée (en mois) :</label>
+                <input type="number" class="form-control" id="duree" min="1" placeholder="Entrez la durée en mois" required>
+              </div>
+              <div class="form-group">
+                <label for="nombreParticipants"><i class="fas fa-users"></i> Nombre de Participants :</label>
+                <input type="number" class="form-control" id="nombreParticipants" min="1" placeholder="Entrez le nombre de participants" required>
+              </div>
+              <div class="form-group">
+                <label for="nombreVersements"><i class="fas fa-history"></i> Nombre de Versements :</label>
+                <input type="number" class="form-control" id="nombreVersements" min="1" placeholder="Entrez le nombre de versements" required>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="autoriserContributions">
+                <label class="form-check-label" for="autoriserContributions">Autoriser les contributions</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="accepterConditions">
+                <label class="form-check-label" for="accepterConditions">J'accepte les conditions de la tontine <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="Règles et de conditions : <br>- Les contributions doivent être effectuées selon les conditions. <br>- Chaque membre doit respecter les règles de conduite et de respect mutuel. <br>- Les décisions du groupe doivent être prises de manière équitable et transparente."></i></label>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary btn-block" id="creerGroupeBtn"><i class="fas fa-plus"></i> Créer le Groupe</button>
+              </div>
+            </form>
+            <div class="alert alert-info mt-3" role="alert" id="infoCalcul"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <!-- Script pour activer les bulles d'information -->
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip({html:true});
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Ma Tontine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .card-header {
+      background-color: #007bff;
+      color: white;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    /* Style pour l'image de profil */
+    #photoProfil {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    /* Style pour le bouton Modifier */
+    #modifierBtn {
+      margin-bottom: 20px; /* Ajout de marge en bas du bouton */
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">Ma Tontine</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tableau de Bord</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profil.html">Profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Groupes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Paramètres</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Déconnexion</a>
+              </li>
+              <!-- Ajout du solde avec une icône d'argent -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-money-bill-wave"></i> Solde: $500
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+         
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <img src="img/avatar.jpg" id="photoProfil" alt="Photo de profil">
+            <h4 class="text-center">Informations du compte</h4>
+          </div>
+          <div class="card-body">
+            <div class="row mx-auto">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nom"><i class="fas fa-user"></i> Nom :</label>
+                  <input type="text" class="form-control" id="nom" value="Nom Utilisateur" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="prenom"><i class="fas fa-user"></i> Prénom :</label>
+                  <input type="text" class="form-control" id="prenom" value="Prénom Utilisateur" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="tel"><i class="fas fa-phone"></i> Téléphone :</label>
+                  <input type="text" class="form-control" id="tel" value="Numéro de téléphone" disabled>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lieuNaissance"><i class="fas fa-map-marker-alt"></i> Lieu de naissance :</label>
+                  <input type="text" class="form-control" id="lieuNaissance" value="Lieu de naissance" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="quartier"><i class="fas fa-map-marker-alt"></i> Quartier :</label>
+                  <input type="text" class="form-control" id="quartier" value="Nom du quartier" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="solde"><i class="fas fa-money-bill-wave"></i> Solde :</label>
+                  <input type="text" class="form-control" id="solde" value="Solde actuel" disabled>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="modifierBtn"><i class="fas fa-edit"></i> Modifier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <!-- Bootstrap JS (si nécessaire) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

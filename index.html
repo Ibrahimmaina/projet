@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Ma Tontine</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Styles personnalisés */
+    /* Ajoutez vos propres styles ici */
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .decor {
+      background-image: url('https://images.unsplash.com/photo-1557682204-5b68bac50df0');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      color: white;
+      text-align: center;
+    }
+    .decor h2 {
+      font-size: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ma Tontine</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inscription.html"><i class="fas fa-user-plus"></i> Inscription</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="apropos.html"><i class="fas fa-info-circle"></i> À Propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+   
+  
+  <!-- Section de présentation -->
+  <div class="container-fluid bg-light py-5">
+    <div class="container text-center">
+      <h1 class="display-4">Bienvenue sur Ma Tontine</h1>
+      <p class="lead">Gérez vos tontines de manière simple et efficace.</p>
+      <a href="inscription.html" class="btn btn-primary btn-lg">Commencer</a>
+    </div>
+  </div>
+
+  <!-- Fonctionnalités principales -->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="feature-icon mb-3">
+          <i class="fas fa-user-friends"></i>
+        </div>
+        <h2>Gestion des membres</h2>
+        <p>Permettez aux utilisateurs de créer des comptes, de se connecter et de gérer leurs informations personnelles.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon mb-3">
+          <i class="fas fa-users"></i>
+        </div>
+        <h2>Création de groupes de tontine</h2>
+        <p>Permettez aux utilisateurs de créer des groupes de tontine, d'inviter d'autres membres et de définir les paramètres de la tontine.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon mb-3">
+          <i class="fas fa-coins"></i>
+        </div>
+        <h2>Gestion des contributions</h2>
+        <p>Permettez aux membres d'un groupe de faire des contributions à la tontine, de voir l'historique des paiements et de recevoir des rappels pour effectuer leurs contributions à temps.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon mb-3">
+          <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h2>Distribution des fonds</h2>
+        <p>Automatisez le processus de distribution des fonds aux membres du groupe selon les règles de la tontine.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon mb-3">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h2>Communication et notifications</h2>
+        <p>Permettez aux membres de communiquer entre eux via la plateforme, de recevoir des notifications sur les activités de la tontine, telles que les contributions effectuées, les paiements distribués, etc.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="feature-icon mb-3">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h2>Suivi des performances</h2>
+        <p>Fournissez des outils d'analyse et de suivi pour que les membres puissent surveiller les performances de leur tontine au fil du temps.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Décor -->
+<div class="decor">
+  <div class="container">
+    <h2 style="color: black;">Inscrivez-vous dès maintenant et commencez à gérer vos tontines!</h2>
+    <a href="inscription.html"btn btn-primary">Commencer</a>
+  </div>
+</div>

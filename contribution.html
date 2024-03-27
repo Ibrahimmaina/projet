@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contribuer à une Tontine - Ma Tontine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .card-header {
+      background-color: #007bff;
+      color: white;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .selected-tontine {
+      border: 2px solid #007bff; /* Couleur de la bordure pour la tontine sélectionnée */
+    }
+  </style>
+</head>
+<body style="margin-bottom: 70px;">
+  <!-- Contenu de la page -->
+  <!-- Barre de Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ma Tontine</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tableau de Bord</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Contribuer à une Tontine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Groupes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Paramètres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Liste des Tontines -->
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-center">Tontines en Cours</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-group" id="tontineList">
+              <li class="list-group-item">Tontine 1</li>
+              <li class="list-group-item">Tontine 2</li>
+              <li class="list-group-item">Tontine 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <!-- Détails de la Tontine -->
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-center">Détails de la Tontine</h4>
+          </div>
+          <div class="card-body selected-tontine">
+            <p class="selected-tontine-title">Tontine sélectionnée :</p>
+            <div class="selected-tontine-info"></div>
+          </div>
+        </div>
+        <!-- Formulaire de Contribution -->
+        <div class="card" id="contributeForm" style="display: none;">
+          <div class="card-header">
+            <h4 class="text-center">Formulaire de Contribution</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="inputSomme">Somme à Contribuer :</label>
+                <input type="number" class="form-control" id="inputSomme" placeholder="Entrez la somme à contribuer">
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Contribuer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <p>© 2024 Ma Tontine. Tous droits réservés.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sélection de la tontine et affichage du formulaire lors de la sélection
+    document.getElementById('tontineList').addEventListener('click', function(event) {
+      // Réinitialiser la mise en surbrillance des tontines
+      var tontineItems = document.querySelectorAll('.list-group-item');
+      tontineItems.forEach(function(item) {
+        item.classList.remove('active');
+      });
+
+      // Mettre en surbrillance la tontine sélectionnée
+      event.target.classList.add('active');
+
+      var selectedTontine = event.target.textContent;
+      var selectedTontineDiv = document.querySelector('.selected-tontine .selected-tontine-info');
+
+      // Afficher le nom de la tontine sélectionnée
+      selectedTontineDiv.innerHTML = '<p><strong>' + selectedTontine + '</strong></p>';
+
+      // Afficher le formulaire de contribution
+      document.getElementById('contributeForm').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
