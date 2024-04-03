@@ -13,17 +13,9 @@
       background-color: #007bff;
       color: white;
     }
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
     body {
-      background-color: #ffffff; /* Couleur de l'arrière-plan */
+      background-color: #f8f9fa; /* Nouvelle couleur de l'arrière-plan */
+      font-family: Arial, sans-serif; /* Police de caractères personnalisée */
     }
   </style>
 </head>
@@ -89,8 +81,8 @@
                 <input type="number" class="form-control" id="nombreParticipants" min="1" placeholder="Entrez le nombre de participants" required>
               </div>
               <div class="form-group">
-                <label for="nombreVersements"><i class="fas fa-history"></i> Nombre de Versements :</label>
-                <input type="number" class="form-control" id="nombreVersements" min="1" placeholder="Entrez le nombre de versements" required>
+                <label for="nombreVersementsParPersonne"><i class="fas fa-history"></i> Nombre de Versements par Personne :</label>
+                <input type="number" class="form-control" id="nombreVersementsParPersonne" min="1" placeholder="Entrez le nombre de versements par personne" required>
               </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="autoriserContributions">
@@ -118,6 +110,22 @@
   <script>
     $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip({html:true});
+    });
+
+    $('#creerGroupeBtn').click(function() {
+      var prix = parseFloat($('#prix').val());
+      var nombreParticipants = parseInt($('#nombreParticipants').val());
+      var nombreVersementsParPersonne = parseInt($('#nombreVersementsParPersonne').val());
+
+      if (!isNaN(prix) && !isNaN(nombreParticipants) && !isNaN(nombreVersementsParPersonne)) {
+        var montantTotalParPersonne = prix * nombreVersementsParPersonne;
+        var gainTotal = montantTotalParPersonne * nombreParticipants;
+        var gainParPersonne = montantTotalParPersonne;
+
+        $('#infoCalcul').html('Gain total de la tontine : ' + gainTotal.toFixed(2) + ' €<br>Gain par personne : ' + gainParPersonne.toFixed(2) + ' €');
+      } else {
+        $('#infoCalcul').html('Veuillez remplir tous les champs avec des valeurs numériques.');
+      }
     });
   </script>
 
